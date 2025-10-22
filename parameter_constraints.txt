@@ -1,0 +1,9 @@
+understeer_slope [1,2]
+cg_to_front 40
+cg_to_rear 31.5
+gear_ratio 20
+saturating_motor_torque [3,9]
+torque_mode 0
+whl_radius [5,5.1]
+car_mass [300,302]
+rolling_drag [4,8]
