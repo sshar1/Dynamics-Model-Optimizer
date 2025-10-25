@@ -20,10 +20,13 @@ def dynamics(state: list[float], action: list[float], next_state: list[float], t
             [7] car_mass
             [8] rolling_drag
     """
+
+    understeer_slope, cg_to_front, cg_to_rear, gear_ratio, saturating_motor_torque, torque_mode, whl_radius, car_mass, rolling_drag = constants
+    
     x, y, yaw, speed = state[0], state[1], state[2], state[3]
     swangle, torque = -action[0], action[1] * gear_ratio
 
-    understeer_slope, cg_to_front, cg_to_rear, gear_ratio, saturating_motor_torque, torque_mode, whl_radius, car_mass, rolling_drag = constants
+    
 
     saturating_tire_torque = saturating_motor_torque * 0.5 * gear_ratio
 
